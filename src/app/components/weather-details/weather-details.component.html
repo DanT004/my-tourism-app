@@ -1,0 +1,43 @@
+<div class="text-center detailHead mt-5">
+    <h1>Weather in {{ name }}</h1>
+</div>
+
+<table class="table table-danger table-striped-columns">
+    <caption>The most suitable time to enjoy your holiday in <span appImportantText>{{ name }}</span> would be between <span appImportantText>{{ visitFrom }}</span> and <span appImportantText>{{ visitTo }}</span> <br>
+    **Temperatures are all in deg. Celsius.
+    </caption>
+    <thead class="text-center table-striped">
+        <tr>
+            <th scope="col" [attr.colspan]="spanNumber">Spring</th>
+            <th scope="col" [attr.colspan]="spanNumber">Summer</th>
+            <th scope="col" [attr.colspan]="spanNumber">Autumn</th>
+            <th scope="col" [attr.colspan]="spanNumber">Winter</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr>
+            <td>Spring<br> Morning</td>
+            <td>Spring<br> Evening</td>
+            <td>Summer<br>Morning</td>
+            <td>Summer<br> Evening</td>
+            <td>Autumn<br> Morning</td>
+            <td>Autumn<br> Evening</td>
+            <td>Winter<br> Morning</td>
+            <td>Winter<br> Evening</td>
+        </tr>
+        <tr>
+            <td>{{ springM }} °</td>
+            <td>{{ springN }} °</td>
+            <td>{{ summerM }} °</td>
+            <td>{{ summerN }} °</td>
+            <td>{{ autumnM }} °</td>
+            <td>{{ autumnN }} °</td>
+            <td>{{ winterM }} °</td>
+            <td>{{ winterM }} °</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="card mx-auto mb-5 button" style="width: 15rem;">
+<a routerLink="/weather" class="text-center">Back To City List</a>
+</div>

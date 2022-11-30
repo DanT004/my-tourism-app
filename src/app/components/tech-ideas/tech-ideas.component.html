@@ -1,0 +1,85 @@
+<div class="container1 mt-5 mb-5 container">
+    <div class="formHead mb-4">
+        <h1>Innovative Ideas</h1>
+    </div>
+
+    <form [formGroup]="userForm">
+        <div class="col-md-6 mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name here..." formControlName="name">
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            Please Enter your name.
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            Name must be at least 3 characters.
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']">
+            Your Name must not contain the word tourist.
+        </div>
+
+
+        <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter @email here..."
+                formControlName="email">
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+            Please Enter your email.
+        </div>
+
+
+        <div class="col-md-2 mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" id="age" formControlName="age">
+        </div>
+
+        
+        <div class="col-md-4 mb-3">
+            <label for="city" class="form-label">Target City:</label>
+            <select class="form-select" id="validationCustom04" formControlName="city">
+                <option selected disabled value="">Choose a City...</option>
+                <option value="{{ city }}" *ngFor="let city of cities">{{city}}</option>
+            </select>
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="cityFormControl.touched && cityFormControl.errors?.['required']">
+            Please choose a city.
+        </div>
+
+
+        <div class="mb-3">
+            <label for="brief" class="form-label">Brief about your Technical Idea:</label>
+            <textarea class="form-control" id="brief" placeholder="Enter a brief message here..."
+                formControlName="brief"></textarea>
+            <div class="invalid-feedback">
+                Please enter a message in the textarea.
+            </div>
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="briefFormControl.touched && briefFormControl.errors?.['required']">
+            Please enter a brief about your project.
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="briefFormControl.dirty && briefFormControl.errors?.['minlength']">
+            Your brief must be more than 14 characters.
+        </div>
+        <div class="alert alert-danger fst-italic"
+            *ngIf="briefFormControl.dirty && briefFormControl.errors?.['prohibited']">
+            Your brief must not contain the word nothing.
+        </div>
+
+
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary" (click)="onSubmit()"
+                [disabled]="userForm.invalid">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="container mt-5 mb-5">
+    <img [src]="img1" class="img-fluid">
+</div>

@@ -1,0 +1,17 @@
+.color{
+    color: salmon;
+}
+
+.cityHead{
+    margin-top: 50px;
+    color: rgb(250, 44, 44);
+    text-decoration: underline;
+}
+
+.cityCard{
+    margin-top: 70px;
+}
+
+.hover:hover{
+    color: red;
+}

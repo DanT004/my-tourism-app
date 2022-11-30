@@ -1,0 +1,25 @@
+<div>
+  <div class="card text-bg-dark mx-auto">
+    <img [src]="img1" class="card-img" alt="mountain-lake">
+  </div>
+</div>
+
+<div class="text-center cityHead">
+  <h1>Top Cities of Japan</h1>
+  </div>
+  
+
+<div class="cityCard">
+<div class="card text-center mb-5" *ngFor="let city of cities">
+    <div class="card-body" >
+      <h2 class="card-title" [ngClass]="{'color':colorit()}">{{ city.name }}</h2>
+      <p class="card-text">Below are some of the famous destinations in {{ city.name }}</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item hover">{{ city.attractionSites[0] }}</li>
+        <li class="list-group-item hover">{{ city.attractionSites[1] }}</li>
+        <li class="list-group-item hover">{{ city.attractionSites[2] }}</li>
+        <li class="list-group-item hover">{{ city.attractionSites[3] }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

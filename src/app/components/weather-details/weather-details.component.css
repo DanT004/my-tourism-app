@@ -1,0 +1,16 @@
+.detailHead{
+    color: red;
+}
+
+.button{
+    background-color: rgb(245, 101, 101);
+}
+
+.button a{
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover{
+    opacity: 70%;
+}

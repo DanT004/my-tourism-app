@@ -1,0 +1,41 @@
+.logo{
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+}
+
+.nav-item {
+    position: relative;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    background-color:salmon;
+    height: 2px;
+    width: 0;
+    left: auto;
+    right: auto;
+    bottom: -2px;
+    transition: .3s ease-in-out;
+    transform: scale(0);
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    transform: scale(1);
+}
+
+li a:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+.active1{
+    color: red;
+}

@@ -1,0 +1,14 @@
+li a{
+   text-decoration: none;
+   color: orange;
+}
+
+li a:hover{
+    color: pink;
+    
+}
+
+.weatherHead{
+    margin-top: 50px;
+    color: rgb(250, 44, 44);
+}

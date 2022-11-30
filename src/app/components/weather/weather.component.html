@@ -1,0 +1,19 @@
+<div>
+    <div class="card text-bg-dark mx-auto">
+        <img [src]="img1" class="card-img" alt="...">
+    </div>
+</div>
+
+<div class="text-center weatherHead">
+    <h1>Click a city for the Weather Data</h1>
+</div>
+
+
+<div class="card mx-auto mt-5 mb-5" style="width: 25rem;">
+    <ul class="list-group list-group-flush fs-4 fst-italic">
+        <li class="list-group-item text-center list" *ngFor="let weather of weatherData"><a
+                [routerLink]="['/weather', weather.name, weather.springN, weather.springM, weather.summerN, weather.summerM, weather.winterN, weather.winterM, weather.autumnN, weather.autumnM, weather.visitFrom, weather.visitTo]"
+                routerLinkActive="active">{{ weather.name }}</a></li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,29 @@
+img{
+   
+    height: 1000px;
+}
+
+@media screen and (min-width: 300px){
+    img{
+        height: 300px;
+    }
+}
+@media screen and (min-width: 700px){
+    img{
+        height: 500px;
+    }
+}
+@media screen and (min-width: 1000px){
+    img{
+        height: 800px;
+    }
+}
+@media screen and (min-width: 1300px){
+    img{
+        height: 1000px;
+    }
+}
+
+.title1{
+    color: rgb(250, 44, 44);
+}
